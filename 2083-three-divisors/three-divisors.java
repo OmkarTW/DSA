@@ -1,19 +1,25 @@
 class Solution {
     public boolean isThree(int n) {
-        int counter = 0;
-        
-        for(int m = 0; m <= n; m++){
-            for(int k = 0; k <= n; k++){
-                if(n == k * m){
-                    counter++;
-                }
+        int root = (int) Math.sqrt(n);
+
+        if (root * root != n) {
+            return false;
+        }
+
+        return isPrime(root);
+    }
+
+    public boolean isPrime(int n) {
+        if (n <= 1) {
+            return false;
+        }
+
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return false;
             }
         }
 
-        if(counter == 3){
-            return true;
-        }
-
-        return false;
+        return true;
     }
 }
