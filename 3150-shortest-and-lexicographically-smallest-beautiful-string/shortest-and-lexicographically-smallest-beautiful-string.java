@@ -1,34 +1,34 @@
 class Solution {
     public String shortestBeautifulSubstring(String s, int k) {
+
+        List<Integer> pos = new ArrayList<>();
+
+        // Store positions of all 1s
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == '1') {
+                pos.add(i);
+            }
+        }
+
+        // Not enough 1s
+        if (pos.size() < k)
+            return "";
+
         String ans = "";
-        int n = s.length();
 
-        for (int i = 0; i < n; i++) {
+        // Every consecutive group of k ones
+        for (int i = 0; i + k - 1 < pos.size(); i++) {
 
-            int oneCnt = 0;
-            StringBuilder cur = new StringBuilder();
+            int start = pos.get(i);
+            int end = pos.get(i + k - 1);
 
-            for (int j = i; j < n; j++) {
+            String cur = s.substring(start, end + 1);
 
-                cur.append(s.charAt(j));
+            if (ans.isEmpty() ||
+                cur.length() < ans.length() ||
+                (cur.length() == ans.length() && cur.compareTo(ans) < 0)) {
 
-                if (s.charAt(j) == '1')
-                    oneCnt++;
-
-                // More than k ones can never become valid again
-                if (oneCnt > k)
-                    break;
-
-                if (oneCnt == k) {
-                    String curStr = cur.toString();
-
-                    if (ans.isEmpty() ||
-                        curStr.length() < ans.length() ||
-                        (curStr.length() == ans.length() && curStr.compareTo(ans) < 0)) {
-
-                        ans = curStr;
-                    }
-                }
+                ans = cur;
             }
         }
 
