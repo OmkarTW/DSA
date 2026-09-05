@@ -2,25 +2,24 @@ class Solution {
     public int firstStableIndex(int[] nums, int k) {
         int n = nums.length;
 
-        int[] prefixMax = new int[n];
-        int[] suffixMin = new int[n];
-
-        prefixMax[0] = nums[0];
-        for (int i = 1; i < n; i++) {
-            prefixMax[i] = Math.max(prefixMax[i - 1], nums[i]);
-        }
-
-        suffixMin[n - 1] = nums[n - 1];
-        for (int i = n - 2; i >= 0; i--) {
-            suffixMin[i] = Math.min(suffixMin[i + 1], nums[i]);
-        }
+        int ansIdx = 0;         // index we're currently testing as the answer
+        int globalMax = Integer.MIN_VALUE;        // biggest number seen anywhere so far
+        int ansMax = Integer.MIN_VALUE; // biggest number up to ansIdx
 
         for (int i = 0; i < n; i++) {
-            if (prefixMax[i] - suffixMin[i] <= k) {
-                return i;
+            globalMax = Math.max(globalMax, nums[i]);
+
+            // only update the candidate's max while we're still inside its prefix
+            if (i == ansIdx)
+                ansMax = Math.max(ansMax, nums[i]);
+
+            // this number is below the allowed floor, jump past it
+            if (nums[i] < ansMax - k) {
+                ansIdx = i + 1;
+                ansMax = globalMax;
             }
         }
 
-        return -1;
+        return ansIdx < n ? ansIdx : -1;
     }
 }
