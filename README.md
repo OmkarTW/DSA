@@ -25,57 +25,35 @@ The goal is to build strong problem-solving fundamentals and prepare for **techn
 
 ---
 
-## 🧩 Topics
+## 🧩 Advanced DSA Topics
 
-The repository is organized topic-wise as I progress through my DSA roadmap.
+### 1. Sorting
+- Bubble Sort
+- Selection Sort
+- Insertion Sort
+- Quick Sort
+- Merge Sort
 
-- Arrays
-- Hashing
-- Binary Search
-- Recursion
-- Sliding Window & Two Pointers
-- Strings
-- Mathematics
-- Linked Lists
-- Bit Manipulation
-- More topics will be added as I progress
+### 2. Arrays
+- Array Traversal & Manipulation
+- Prefix/Suffix Techniques
+- Kadane's Algorithm
+- Two Pointers
+- Matrix Traversal & Rotation
+- Pascal's Triangle
+- Sorting & Rearrangement
+- 3Sum / 4Sum
+- Inversion & Reverse Pair Counting
 
----
-
-## 📈 Progress
-
-| Topic | Status |
-|---|---|
-| Arrays | ✅ Completed |
-| Hashing | ✅ Completed |
-| Binary Search | 🔄 In Progress |
-| Recursion | ⏳ Upcoming |
-| Sliding Window / Two Pointers | ⏳ Upcoming |
-| Strings | 🔄 Revising |
-| Mathematics | 🔄 Revising |
-| Linked Lists | ⏳ Upcoming |
-| Bit Manipulation | ⏳ Upcoming |
+### 3. Hashing
+- Frequency Hashing
+- HashMap / TreeMap
+- Frequency-based Problems
+- Prefix Sum + HashMap
+- XOR + HashMap
 
 ---
 
-## 🏆 Practice
-
-Problems are solved from platforms including:
-
-- **LeetCode**
-- **Striver's A2Z DSA Sheet**
-
-Each problem is organized by topic and includes the corresponding Java solution.
-
-Where useful, solutions focus on:
-
-- Intuition
-- Approach
-- Time Complexity
-- Space Complexity
-- Edge Cases
-
----
 
 ## 🔄 Revision Strategy
 
@@ -87,13 +65,6 @@ The focus is on:
 
 ---
 
-## 📌 Current Focus
-
-**Binary Search**
-
-Alongside new topics, previously completed topics are continuously revised to maintain retention.
-
----
 
 ## 🚀 Progress
 
