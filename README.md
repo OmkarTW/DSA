@@ -1,34 +1,102 @@
-# DSA
-
 # 📚 Data Structures & Algorithms
 
-This repository contains my journey of learning **Data Structures & Algorithms** and solving coding problems using **Java**.
+A collection of my **Data Structures & Algorithms** solutions and notes, implemented in **Java**.
 
-I'm using this repository to keep track of the problems I solve, the approaches I learn, and my progress over time.
+I'm following a structured DSA roadmap, solving problems primarily from **Striver's A2Z DSA Sheet** and **LeetCode**, while maintaining regular revision and coding practice.
+
+The goal is to build strong problem-solving fundamentals and prepare for **technical interviews and coding assessments**.
+
+---
 
 ## 🎯 Goals
 
-* Build a strong foundation in Data Structures & Algorithms
-* Improve problem-solving skills
-* Get comfortable solving coding problems in Java
-* Prepare for technical interviews and coding assessments
-* Stay consistent with DSA practice
+- Build a strong foundation in Data Structures & Algorithms
+- Develop pattern recognition and problem-solving skills
+- Improve proficiency in Java
+- Practice writing efficient and clean solutions
+- Prepare for technical interviews and coding assessments
+- Maintain consistent DSA practice
+
+---
 
 ## 💻 Language
 
 **Java ☕**
 
-## 🧩 Problems
+---
 
-Solutions will be added as I work through different DSA concepts and problems on platforms such as **LeetCode**.
+## 🧩 Topics
 
-Each solution will be organized by topic as the repository grows.
+The repository is organized topic-wise as I progress through my DSA roadmap.
+
+- Arrays
+- Hashing
+- Binary Search
+- Recursion
+- Sliding Window & Two Pointers
+- Strings
+- Mathematics
+- Linked Lists
+- Bit Manipulation
+- More topics will be added as I progress
+
+---
 
 ## 📈 Progress
 
-This repository is a work in progress.
+| Topic | Status |
+|---|---|
+| Arrays | ✅ Completed |
+| Hashing | ✅ Completed |
+| Binary Search | 🔄 In Progress |
+| Recursion | ⏳ Upcoming |
+| Sliding Window / Two Pointers | ⏳ Upcoming |
+| Strings | 🔄 Revising |
+| Mathematics | 🔄 Revising |
+| Linked Lists | ⏳ Upcoming |
+| Bit Manipulation | ⏳ Upcoming |
 
-I'll be adding solutions, notes, and explanations as I continue learning.
+---
 
-> Starting small. Learning consistently. Getting better one problem at a time. 🚀
+## 🏆 Practice
 
+Problems are solved from platforms including:
+
+- **LeetCode**
+- **Striver's A2Z DSA Sheet**
+
+Each problem is organized by topic and includes the corresponding Java solution.
+
+Where useful, solutions focus on:
+
+- Intuition
+- Approach
+- Time Complexity
+- Space Complexity
+- Edge Cases
+
+---
+
+## 🔄 Revision Strategy
+
+Completed topics are periodically revisited through problem-solving rather than simply rereading solutions.
+
+The focus is on:
+
+> **Recognize the pattern → Explain the approach → Implement → Analyze complexity**
+
+---
+
+## 📌 Current Focus
+
+**Binary Search**
+
+Alongside new topics, previously completed topics are continuously revised to maintain retention.
+
+---
+
+## 🚀 Progress
+
+This repository is continuously evolving as I learn, solve, revise, and improve.
+
+> **Learn. Solve. Revise. Repeat.**
