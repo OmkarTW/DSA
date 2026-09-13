@@ -1,50 +1,24 @@
 class Solution {
     public int largestOverlap(int[][] img1, int[][] img2) {
-
         int n = img1.length;
-
-        // Store the coordinates of all 1s in both images
-        List<int[]> ones1 = new ArrayList<>();
-        List<int[]> ones2 = new ArrayList<>();
-
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-
-                if (img1[i][j] == 1) {
-                    ones1.add(new int[]{i, j});
-                }
-
-                if (img2[i][j] == 1) {
-                    ones2.add(new int[]{i, j});
-                }
+        // collect every coordinate that holds a 1
+        List<int[]> A = new ArrayList<>();
+        List<int[]> B = new ArrayList<>();
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < n; ++j) {
+                if (img1[i][j] == 1) A.add(new int[]{i, j});
+                if (img2[i][j] == 1) B.add(new int[]{i, j});
             }
         }
-
-        /*
-         * Key   = translation (row shift, column shift)
-         * Value = number of overlapping 1s for that translation
-         */
-        Map<String, Integer> map = new HashMap<>();
-
-        int maxOverlap = 0;
-
-        // Try every 1 in img1 with every 1 in img2
-        for (int[] p1 : ones1) {
-            for (int[] p2 : ones2) {
-
-                int rowShift = p2[0] - p1[0];
-                int colShift = p2[1] - p1[1];
-
-                String shift = rowShift + "," + colShift;
-
-                int overlap = map.getOrDefault(shift, 0) + 1;
-
-                map.put(shift, overlap);
-
-                maxOverlap = Math.max(maxOverlap, overlap);
+        int[][] cnt = new int[2 * n][2 * n];
+        int best = 0;
+        for (int[] a : A) {
+            for (int[] b : B) {
+                int dx = b[0] - a[0] + n;
+                int dy = b[1] - a[1] + n;
+                best = Math.max(best, ++cnt[dx][dy]);
             }
         }
-
-        return maxOverlap;
+        return best;
     }
 }
